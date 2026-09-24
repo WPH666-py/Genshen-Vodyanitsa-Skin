@@ -1,0 +1,42 @@
+{
+  "name": "genshen-vodyanitsa-skin",
+  "displayName": "原神沃雅妮莎动态皮肤",
+  "description": "原神 沃雅妮莎（Vodyanitsa）动态皮肤：三张壁纸可切换，点击释放元素爆发语音与特效",
+  "version": "1.0.0",
+  "publisher": "wp666",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "genshin",
+    "vodyanitsa",
+    "原神",
+    "沃雅妮莎",
+    "skin",
+    "wallpaper"
+  ],
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WPH666-py/Genshen-Vodyanitsa-Skin"
+  },
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vodyanitsaSkin.show",
+        "title": "沃雅妮莎皮肤：显示",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "vodyanitsaSkin.uninstall",
+        "title": "沃雅妮莎皮肤：一键卸载",
+        "icon": "$(trash)"
+      }
+    ]
+  }
+}

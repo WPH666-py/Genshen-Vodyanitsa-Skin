@@ -1,0 +1,62 @@
+﻿/**
+ * 沃雅妮莎 · 清露 —— DeepKing 皮肤配色变量
+ *
+ * 本文件是 Genshen-Desktop-Skin 的能力判据之一：
+ * 存在 src/client/deepking-skin.module.css 即认为该皮肤支持 DeepKing。
+ *
+ * 注意（DeepKing 转换器的两个硬性约束）：
+ *   1. 色值必须是 # 开头的十六进制，rgb()/hsl()/颜色名会被忽略；
+ *   2. 不要在暗色作用域里重复声明同名变量 —— extractVars() 是无作用域全文扫描、
+ *      后者覆盖前者，暗色值会把亮色调色板一起刷深。这里暗色统一用 --duskcolor-*
+ *      前缀，且选择器不含 dark 字样。
+ */
+
+:root {
+  /* 亮色 · 奶白晨光（取自立绘的浅底与白袜） */
+  --bg-base: #f9fcfd;
+  --bg-layer-1: #f9fcfd;
+  --bg-layer-2: #eaf4f7;
+  --bg-layer-3: #d5e8ee;
+
+  --label-primary: #12222b;
+  --label-secondary: #3a5361;
+  --label-tertiary: #74919c;
+
+  /* 主题色：沃雅妮莎的粉 */
+  --brand-primary: #5a89b0;
+  --accent: #5a89b0;
+  --primary: #5a89b0;
+
+  --interactive-bg-hover-solid: #dcf0f5;
+  --interactive-bg-active: #bcdfe8;
+
+  --border-l1: #daedf2;
+  --border-l2: #b8d4de;
+  --border: #b8d4de;
+
+  --system-warn-bg: #fff4dd;
+  --system-warn-text: #8a5a00;
+}
+
+/* 夜景配色（深粉夜色）：统一 duskcolor 前缀，避免污染亮色变量 */
+[data-theme="midnight"],
+.midnight-theme {
+  --duskcolor-bgbase: #0e1c24;
+  --duskcolor-bglayer2: #16303a;
+  --duskcolor-bglayer3: #22454f;
+
+  --duskcolor-labelprimary: #e4f4f8;
+  --duskcolor-labelsecondary: #a8c8d4;
+  --duskcolor-labeltertiary: #7898a4;
+
+  --duskcolor-brandprimary: #6fa8c4;
+
+  --duskcolor-hoversolid: #22454f;
+  --duskcolor-activebg: #2d5568;
+
+  --duskcolor-borderl1: #1e4049;
+  --duskcolor-borderl2: #28505f;
+
+  --duskcolor-warnbg: #3a3118;
+  --duskcolor-warntext: #ecd9a0;
+}
